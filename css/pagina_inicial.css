@@ -341,42 +341,71 @@ section span {
   transition: transform 0.3s ease;
 }
 
-.caixa_dos_serviços {
+.titulo-servicos {
   color: white;
-  margin: auto;
-  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  font-size: 2rem;
 }
 
 hr {
   width: 15%;
   border: 0;
-  height: 1px;
+  height: 2px;
   background-color: white;
-  margin: auto;
-  size-adjust: 5px;
+  margin: 20px auto;
 }
 
-.Meus_serviços {
-  padding: 30px 0px;
-  margin: 10px;
-  width: 240px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  color: #6ac1cc;
-  background-color: white;
-  text-align: center;
-  margin-top: 50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.Meus_serviços:hover {
-  transform: translateY(-5px);
-}
-
-.serviços {
+.container-servicos {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-servico {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 25px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-servico:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.icone-servico {
+  font-size: 2.5rem;
+  color: #6ac1cc;
+  margin-bottom: 20px;
+}
+
+.titulo-card {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.descricao-servico {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container-servicos {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-servico {
+    width: 80%;
+  }
 }
