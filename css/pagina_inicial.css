@@ -14,7 +14,7 @@ body {
 }
 
 .main-header {
-  position:relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -114,7 +114,7 @@ section span {
 }
 
 #sobre {
-  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.95) 100%);
   padding: 100px 0;
   min-height: auto;
 }
@@ -138,7 +138,7 @@ section span {
   max-width: 400px;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
@@ -205,9 +205,9 @@ section span {
 .dado-item {
   text-align: center;
   padding: 20px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -247,11 +247,11 @@ section span {
   .sobre-container {
     gap: 40px;
   }
-  
+
   .sobre-titulo {
     font-size: 42px;
   }
-  
+
   .sobre-texto {
     font-size: 16px;
   }
@@ -261,45 +261,45 @@ section span {
   .main-header {
     padding: 20px 30px;
   }
-  
+
   main section {
     padding: 100px 30px 60px;
   }
-  
+
   .sobre-container {
     flex-direction: column;
     padding: 0 30px;
     gap: 40px;
   }
-  
+
   .sobre-titulo {
     font-size: 36px;
     text-align: center;
   }
-  
+
   .sobre-titulo::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .sobre-texto {
     text-align: center;
   }
-  
+
   .sobre-dados {
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   .dado-item {
     flex: 1;
     min-width: 120px;
   }
-  
+
   .foto_marilia {
     max-width: 300px;
   }
-  
+
   .sobre-detalhe {
     top: -15px;
     left: -15px;
@@ -310,22 +310,22 @@ section span {
   .logo a {
     font-size: 1.5rem;
   }
-  
+
   .main-nav ul {
     gap: 20px;
   }
-  
+
   .sobre-titulo {
     font-size: 32px;
   }
-  
+
   .dado-numero {
     font-size: 36px;
   }
 }
 
 #projetos {
-  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.95) 100%);
   padding: 100px 0;
   min-height: auto;
 }
@@ -335,8 +335,48 @@ section span {
   max-width: 400px;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
+}
+
+.caixa_dos_serviços {
+  color: white;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+hr {
+  width: 15%;
+  border: 0;
+  height: 1px;
+  background-color: white;
+  margin: auto;
+  size-adjust: 5px;
+}
+
+.Meus_serviços {
+  padding: 30px 0px;
+  margin: 10px;
+  width: 240px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  color: #6ac1cc;
+  background-color: white;
+  text-align: center;
+  margin-top: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Meus_serviços:hover {
+  transform: translateY(-5px);
+}
+
+.serviços {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
