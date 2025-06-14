@@ -234,7 +234,7 @@
       margin-bottom: 30px;
       font-size: 1.1rem;
     }
-/* Estilos gerais da seção, ajuste conforme necessário */
+
 .projetos1 {
   text-align: center;
   padding: 40px 20px;
@@ -252,27 +252,26 @@
   margin-bottom: 30px;
 }
 
-/* Estilos do Slider */
 .slider-container {
-  position: relative; /* Para posicionar os botões */
+  position: relative; 
   width: 100%;
-  max-width: 800px; /* Largura máxima do slider */
+  max-width: 800px; 
   margin: 0 auto;
-  overflow: hidden; /* Importante: esconde o conteúdo que está fora */
+  overflow: hidden; 
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .slider-wrapper {
-  display: flex; /* Alinha as imagens horizontalmente */
-  transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave */
+  display: flex; 
+  transition: transform 0.5s ease-in-out; /
 }
 
 .slider-wrapper .casa {
-  min-width: 100%; /* Cada imagem ocupa 100% da largura do contêiner */
+  min-width: 100%; 
   height: auto;
-  display: block; /* Remove espaços extras abaixo da imagem */
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  display: block; 
+  object-fit: cover; 
 }
 
 .slider-button {
