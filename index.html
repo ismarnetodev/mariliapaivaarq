@@ -13,8 +13,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-aFwesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="./css/index.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -44,7 +44,7 @@
       <div class="container-servicos">
         <div class="card-servico">
           <div class="icone-servico">
-            <i class="fas fa-building"></i>
+            <i class="fas fa-drafting-compass"></i>
           </div>
           <h3 class="titulo-card">Arquitetura</h3>
           <p class="descricao-servico">Projetos arquitetônicos completos e personalizados para seu espaço.</p>
@@ -52,7 +52,7 @@
 
         <div class="card-servico">
           <div class="icone-servico">
-            <i class="fas fa-couch"></i>
+            <i class="fas fa-paint-roller"></i>
           </div>
           <h3 class="titulo-card">Interiores</h3>
           <p class="descricao-servico">Design de interiores que combina funcionalidade e estética.</p>
@@ -60,7 +60,7 @@
 
         <div class="card-servico">
           <div class="icone-servico">
-            <i class="fas fa-clipboard-check"></i>
+            <i class="fas fa-hard-hat"></i>
           </div>
           <h3 class="titulo-card">Acompanhamento</h3>
           <p class="descricao-servico">Acompanhamento completo durante todo o processo de construção.</p>
@@ -120,7 +120,6 @@
   </main>
 
   <script>
-
     document.addEventListener('DOMContentLoaded', function () {
       const heroLines = document.querySelectorAll('.hero-line span');
       heroLines.forEach((line, index) => {
@@ -155,9 +154,7 @@
         const newSlideWidth = slides[0].clientWidth;
         sliderWrapper.style.transform = `translateX(${-currentIndex * newSlideWidth}px)`;
       });
-
     });
-
   </script>
 </body>
 
