@@ -14,11 +14,11 @@
     href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../css/pagina_inicial.css" />
+  <link rel="stylesheet" href="./css/index.css"
 </head>
 
 <body>
- <header class="main-header">
+  <header class="main-header">
     <div class="logo"><a href="#">Marilia Arquitetura</a></div>
     <nav class="main-nav">
       <ul>
@@ -44,7 +44,7 @@
       <div class="container-servicos">
         <div class="card-servico">
           <div class="icone-servico">
-            <i class="fas fa-building"></i> 
+            <i class="fas fa-building"></i>
           </div>
           <h3 class="titulo-card">Arquitetura</h3>
           <p class="descricao-servico">Projetos arquitetônicos completos e personalizados para seu espaço.</p>
@@ -52,7 +52,7 @@
 
         <div class="card-servico">
           <div class="icone-servico">
-            <i class="fas fa-couch"></i> 
+            <i class="fas fa-couch"></i>
           </div>
           <h3 class="titulo-card">Interiores</h3>
           <p class="descricao-servico">Design de interiores que combina funcionalidade e estética.</p>
@@ -68,11 +68,22 @@
       </div>
     </section>
 
-    <section id="projetos">
+    <section id="projetos" class="projetos1">
       <h2>PROJETOS</h2>
       <p>Elegantes e sofisticados</p>
-      <img src="https://images.adsttc.com/media/images/57b4/5bad/e58e/cecb/8100/0001/newsletter/7.jpg?1471437734"
-        alt="casa1" class="casa1">
+
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <img src="https://images.adsttc.com/media/images/57b4/5bad/e58e/cecb/8100/0001/newsletter/7.jpg?1471437734"
+            alt="casa1" class="casa" />
+          <img src="https://www.marfeengenharia.com.br/wp-content/uploads/2021/05/projeto-arquitetura.jpg" alt="casa2"
+            class="casa" />
+          <img src="https://i.pinimg.com/736x/44/8f/40/448f405cb244996e6c221e61e6cd2835.jpg" alt="casa3" class="casa" />
+          <img src="https://www.projetoacessivel.com.br/images/slider-img2.jpg" alt="casa4" class="casa" />
+        </div>
+        <button class="slider-button prev">❮</button>
+        <button class="slider-button next">❯</button>
+      </div>
     </section>
 
     <section id="sobre" class="sobre-section">
@@ -109,13 +120,44 @@
   </main>
 
   <script>
-    // Adiciona classe de animação quando a página carrega
-    document.addEventListener('DOMContentLoaded', function() {
+
+    document.addEventListener('DOMContentLoaded', function () {
       const heroLines = document.querySelectorAll('.hero-line span');
       heroLines.forEach((line, index) => {
         line.style.animationDelay = `${index * 0.2}s`;
       });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const sliderWrapper = document.querySelector('.slider-wrapper');
+      const slides = document.querySelectorAll('.slider-wrapper .casa');
+      const prevButton = document.querySelector('.slider-button.prev');
+      const nextButton = document.querySelector('.slider-button.next');
+
+      let currentIndex = 0; 
+      const slideWidth = slides[0].clientWidth; 
+
+      function moveSlider() {
+        sliderWrapper.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+      }
+
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length; 
+        moveSlider();
+      });
+
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length; 
+        moveSlider();
+      });
+
+      window.addEventListener('resize', () => {
+        const newSlideWidth = slides[0].clientWidth;
+        sliderWrapper.style.transform = `translateX(${-currentIndex * newSlideWidth}px)`;
+      });
+
+    });
+
   </script>
 </body>
 

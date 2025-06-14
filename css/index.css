@@ -92,7 +92,6 @@
       backdrop-filter: blur(2px);
     }
 
-    /* Efeito de texto quebrado similar ao Moo Arquitetura */
     .hero-text {
       display: flex;
       flex-direction: column;
@@ -147,7 +146,7 @@
       align-items: center;
     }
 
-    /* Restante do seu CSS... */
+
     .servicos {
       background: rgba(255, 255, 255, 0.1);
       padding: 80px 20px;
@@ -235,15 +234,90 @@
       margin-bottom: 30px;
       font-size: 1.1rem;
     }
+/* Estilos gerais da seção, ajuste conforme necessário */
+.projetos1 {
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    .casa1 {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      margin: 0 auto;
-    }
+.projetos1 h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.projetos1 p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Estilos do Slider */
+.slider-container {
+  position: relative; /* Para posicionar os botões */
+  width: 100%;
+  max-width: 800px; /* Largura máxima do slider */
+  margin: 0 auto;
+  overflow: hidden; /* Importante: esconde o conteúdo que está fora */
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.slider-wrapper {
+  display: flex; /* Alinha as imagens horizontalmente */
+  transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.slider-wrapper .casa {
+  min-width: 100%; /* Cada imagem ocupa 100% da largura do contêiner */
+  height: auto;
+  display: block; /* Remove espaços extras abaixo da imagem */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5em;
+  border-radius: 5px;
+  z-index: 10; 
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .slider-button {
+    padding: 8px 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .projetos1 h2 {
+    font-size: 2em;
+  }
+
+  .projetos1 p {
+    font-size: 1em;
+  }
+
+  .slider-button {
+    padding: 5px 8px;
+    font-size: 1em;
+  }
+}
 
     #sobre {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.95) 100%);
