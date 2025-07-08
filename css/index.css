@@ -1,3 +1,13 @@
+    :root {
+      --verde-principal: #64886f;
+      --verde-escuro: #4a6652;
+      --verde-claro: #8ba893;
+      --verde-pastel: #d1e0d5;
+      --branco: #ffffff;
+      --preto: #111111;
+      --cinza-claro: #f5f5f5;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -8,7 +18,7 @@
     body {
       font-family: 'Inter', sans-serif;
       color: #111;
-      background: linear-gradient(#447888, #6ac1cc);
+      background: var(--verde-principal);
       padding-top: 0px;
       line-height: 1.6;
     }
@@ -18,7 +28,7 @@
       top: 15%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(88, 172, 183, 0.5);
+      background: rgba(100, 136, 111, 0.85);
       padding: 15px 30px;
       width: 90%;
       max-width: 1000px;
@@ -69,7 +79,8 @@
     }
 
     .contact-button {
-      border: 1px solid #ffffff;
+      border: 1px solid var(--branco);
+      background-color: transparent;
       padding: 5px 15px;
       border-radius: 3px;
       font-weight: 500;
@@ -78,7 +89,7 @@
     }
 
     .contact-button:hover {
-      background-color: #47a4b3;
+      background-color: var(--verde-escuro);
       color: #fff;
       transform: scale(1.05);
     }
@@ -122,6 +133,7 @@
     .hero-line:nth-child(1) span {
       animation-delay: 0.2s;
     }
+
     .hero-line:nth-child(2) span {
       animation-delay: 0.4s;
     }
@@ -148,7 +160,7 @@
 
 
     .servicos {
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--verde-claro);
       padding: 80px 20px;
     }
 
@@ -181,7 +193,8 @@
     }
 
     .card-servico {
-      background-color: white;
+      background: var(--branco);
+      border: 1px solid var(--verde-pastel);
       border-radius: 10px;
       padding: 25px 20px;
       width: 100%;
@@ -216,7 +229,7 @@
     }
 
     #projetos {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.95) 100%);
+      background: var(--verde-principal);
       padding: 80px 20px;
       text-align: center;
     }
@@ -224,7 +237,7 @@
     #projetos h2 {
       font-family: "Playfair Display", serif;
       font-size: 2.5rem;
-      color: #333;
+      color: var(--branco);
       margin-bottom: 15px;
     }
 
@@ -235,88 +248,88 @@
       font-size: 1.1rem;
     }
 
-.projetos1 {
-  text-align: center;
-  padding: 40px 20px;
-}
+    .projetos1 {
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-.projetos1 h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #333;
-}
+    .projetos1 h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
 
-.projetos1 p {
-  font-size: 1.2em;
-  color: #666;
-  margin-bottom: 30px;
-}
+    .projetos1 p {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 30px;
+    }
 
-.slider-container {
-  position: relative; 
-  width: 100%;
-  max-width: 800px; 
-  margin: 0 auto;
-  overflow: hidden; 
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
 
-.slider-wrapper {
-  display: flex; 
-  transition: transform 0.5s ease-in-out; /
-}
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;/
+    }
 
-.slider-wrapper .casa {
-  min-width: 100%; 
-  height: auto;
-  display: block; 
-  object-fit: cover; 
-}
+    .slider-wrapper .casa {
+      min-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
 
-.slider-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 1.5em;
-  border-radius: 5px;
-  z-index: 10; 
-}
+    .slider-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 1.5em;
+      border-radius: 5px;
+      z-index: 10;
+    }
 
-.slider-button.prev {
-  left: 10px;
-}
+    .slider-button.prev {
+      left: 10px;
+    }
 
-.slider-button.next {
-  right: 10px;
-}
+    .slider-button.next {
+      right: 10px;
+    }
 
-@media (max-width: 768px) {
-  .slider-button {
-    padding: 8px 12px;
-    font-size: 1.2em;
-  }
-}
+    @media (max-width: 768px) {
+      .slider-button {
+        padding: 8px 12px;
+        font-size: 1.2em;
+      }
+    }
 
-@media (max-width: 480px) {
-  .projetos1 h2 {
-    font-size: 2em;
-  }
+    @media (max-width: 480px) {
+      .projetos1 h2 {
+        font-size: 2em;
+      }
 
-  .projetos1 p {
-    font-size: 1em;
-  }
+      .projetos1 p {
+        font-size: 1em;
+      }
 
-  .slider-button {
-    padding: 5px 8px;
-    font-size: 1em;
-  }
-}
+      .slider-button {
+        padding: 5px 8px;
+        font-size: 1em;
+      }
+    }
 
     #sobre {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.95) 100%);
@@ -351,7 +364,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      border: 3px solid #6ac1cc;
+      border: 3px solid #64886f;
       border-radius: 15px;
       top: -15px;
       left: -15px;
@@ -379,7 +392,7 @@
       bottom: -10px;
       width: 80px;
       height: 3px;
-      background: #6ac1cc;
+      background: var(--verde-principal);
     }
 
     .sobre-texto {
@@ -412,7 +425,7 @@
       font-family: "Playfair Display", serif;
       font-size: 2rem;
       font-weight: 700;
-      color: #6ac1cc;
+      color: var(--verde-principal);
       display: block;
       line-height: 1;
     }
@@ -426,7 +439,7 @@
     }
 
     #contato {
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: #64886f;
       padding: 80px 20px;
       text-align: center;
     }
@@ -434,13 +447,13 @@
     #contato h2 {
       font-family: "Playfair Display", serif;
       font-size: 2.5rem;
-      color: #333;
+      color: #ffffff;
       margin-bottom: 15px;
     }
 
     #contato p {
       font-family: "Inter", sans-serif;
-      color: #555;
+      color: #ffffff;
       font-size: 1.1rem;
       max-width: 600px;
       margin: 0 auto 30px;
@@ -450,38 +463,38 @@
       .main-header {
         padding: 15px 40px;
       }
-      
+
       .main-nav ul {
         gap: 30px;
       }
-      
+
       .hero-line {
         font-size: clamp(3rem, 8vw, 6rem);
       }
-      
+
       .sobre-container {
         flex-direction: row;
         padding: 0 40px;
         gap: 40px;
       }
-      
+
       .sobre-conteudo {
         text-align: left;
       }
-      
+
       .sobre-titulo::after {
         left: 0;
         transform: none;
       }
-      
+
       .sobre-texto {
         text-align: left;
       }
-      
+
       .sobre-dados {
         justify-content: flex-start;
       }
-      
+
       .card-servico {
         width: calc(50% - 20px);
       }
@@ -491,32 +504,32 @@
       .main-header {
         padding: 15px 60px;
       }
-      
+
       .hero-line {
         font-size: clamp(4rem, 8vw, 7rem);
       }
-      
+
       .sobre-container {
         gap: 60px;
         padding: 0 60px;
       }
-      
+
       .sobre-titulo {
         font-size: 3rem;
       }
-      
+
       .sobre-texto {
         font-size: 1.125rem;
       }
-      
+
       .dado-item {
         padding: 20px;
       }
-      
+
       .dado-numero {
         font-size: 2.625rem;
       }
-      
+
       .card-servico {
         width: calc(33.333% - 20px);
       }
@@ -529,30 +542,30 @@
         padding: 15px;
         top: 10%;
       }
-    
+
       .logo a {
         font-size: 1.5rem;
       }
-    
+
       .main-nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px 20px;
       }
-    
+
       .contact-button {
         padding: 5px 10px;
         font-size: 0.875rem;
       }
-    
+
       .hero-line {
         font-size: 2rem;
       }
-    
+
       .sobre-titulo {
         font-size: 2rem;
       }
-    
+
       .dado-item {
         min-width: calc(50% - 10px);
       }
